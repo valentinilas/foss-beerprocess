@@ -1,32 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <app-navigation />
+
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
+    <loader :spinner="loaded" />
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
+<script>
+import Navigation from "./components/navigation/navigation.vue";
+import Loader from "./components/loader/loader.vue";
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+export default {
+  name: "App",
+  // data() {
+  //   return {
+  //     spinner: this.loaded,
+  //   };
+  // },
+  components: {
+    "app-navigation": Navigation,
+    loader: Loader,
+  },
+  computed:{
+    loaded(){
+      return this.$store.getters.getLoadedStatus;
+    }
+  },
+  created(){
+    this.$store.dispatch('preload');
+  }
+};
+</script>
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style lang="scss" src="./app.scss" ></style>
