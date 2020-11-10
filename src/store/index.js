@@ -19,12 +19,12 @@ export default new Vuex.Store({
     actions: {
         preload(state) {
             preloadVideos(
-                "./assets/videos/sample.mp4",
-                "./assets/videos/sample2.mp4",
-                "./assets/videos/sample3.mp4",
-                "./assets/videos/sample4.mp4",
-                "./assets/videos/sample5.mp4",
-                "./assets/videos/sample6.mp4"
+                "media/sample.mp4",
+                "media/videos/sample2.mp4",
+                "media/videos/sample3.mp4",
+                "media/videos/sample4.mp4",
+                "media/videos/sample5.mp4",
+                "media/videos/sample6.mp4"
             ).then(data => {
                 console.log(data);
                 state.commit('setVideoUrls', data);
