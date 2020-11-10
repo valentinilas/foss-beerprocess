@@ -1,6 +1,6 @@
 <template>
   <div>
-    <video id="step-4" class="step-video" width="1280" height="720" autoplay>
+    <video id="step-4" class="step-video" width="1280" height="720" autoplay disablePictureInPicture >
       <source src="../../assets/videos/sample5.mp4" type="video/mp4" />
     </video>
   </div>

@@ -1,6 +1,6 @@
 .main-nav {
     width: 90%;
-    background-color: rgba(0, 40, 90, 0.75);
+    background-color: rgba(0, 40, 90, 0.95);
     display: flex;
     flex-direction: row;
     margin: 0 auto;
@@ -17,7 +17,7 @@
     position: relative;
     // border: 1px solid red;
     text-decoration: none;
-    outline: none;
+    outline: none !important;
     user-select: none;
     flex: 1 1 0px;
     max-width: 135px;
@@ -50,7 +50,6 @@
 .main-nav__step-text {
     color: #fff;
     text-align: center;
-    font-family: 'Hind', sans-serif;
     margin-top: 0.75rem;
     border-bottom: 2px solid transparent;
 }
@@ -107,4 +106,100 @@
 
 .main-nav__step--6 .main-nav__step-image {
     background-image: url('../../assets/icons/__Step-6.svg')
+}
+
+// In-page links
+.in-page-link {
+    outline: none !important;
+    position: absolute;
+    z-index: 999;
+    text-decoration: none;
+    user-select: none;
+    .in-page-link__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .in-page-link__text {
+        color: #fff;
+        transition: 0.2s linear all;
+        background-color: rgb(245, 140, 40);
+        margin-left: 1rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0 10px 10px 10px;
+    }
+    &:hover .in-page-link__icon {
+        // animation: none;
+    }
+    &:hover .in-page-link__text {
+        background-color: #fff;
+        color: #000;
+    }
+    .in-page-link__icon {
+        transition: 0.2s linear all;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+        transform: scale(1);
+        animation: pulse 2s infinite;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            background-image: url('../../assets/icons/play-button.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+// transitions
+.fade-enter-active .in-page-link,
+.fade-leave-active .in-page-link {
+    transition: all .6s ease;
+}
+
+.fade-enter .in-page-link,
+.fade-leave-to .in-page-link {
+    opacity: 0;
+    transition-delay: 0s;
+    transform: scale(0);
+}
+
+// Animation
+.blob {
+    background: black;
+    border-radius: 50%;
+    margin: 10px;
+    height: 20px;
+    width: 20px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 255.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
 }
