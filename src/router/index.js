@@ -1,19 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import PageStart from '../views/start/Start.vue'
+
+
+import Start from '../views/start/Start.vue'
 import Step1 from '../views/step-1/Step-1.vue'
 import Step2 from '../views/step-2/Step-2.vue'
 import Step3 from '../views/step-3/Step-3.vue'
 import Step4 from '../views/step-4/Step-4.vue'
 import Step5 from '../views/step-5/Step-5.vue'
 import Step6 from '../views/step-6/Step-6.vue'
+import Step7 from '../views/step-7/Step-7.vue'
 
 Vue.use(VueRouter)
 
 const routes = [{
         path: '/',
-        name: 'Home',
-        component: PageStart
+        name: 'Start',
+        component: Start
     },
     {
         path: '/step-1',
@@ -44,6 +47,11 @@ const routes = [{
         path: '/step-6',
         name: 'Step6',
         component: Step6
+    },
+    {
+        path: '/step-7',
+        name: 'Step7',
+        component: Step7
     }
 
 ]
@@ -51,6 +59,11 @@ const routes = [{
 const router = new VueRouter({
     routes,
     linkExactActiveClass: 'is-active',
+})
+
+router.beforeEach((to, from, next) => {
+    if (!from.name && to.path !== '/') next({ name: 'Start' })
+    else next()
 })
 
 export default router

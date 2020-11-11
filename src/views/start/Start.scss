@@ -1,9 +1,110 @@
-.in-page-link--welcome {
-    top: 50%;
-    left: 25%;
+.start-page {
+    background-color: rgb(0, 40, 90);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.in-page-link--grinding {
-    top: 35%;
-    right: 25%;
+.foss-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.start-page__intro-block {
+    opacity: 0;
+    color: #fff;
+    h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 2rem;
+    }
+    .start-page__begin {
+        outline: none !important;
+        text-decoration: none !important;
+        margin-top: 2.5rem;
+        display: inline-block;
+        opacity: 0;
+        .start-page__begin__wrapper {
+            padding: 1rem 3rem;
+            background-color: rgb(245, 140, 40);
+            flex-grow: 0;
+            border-radius: 0 10px 10px 10px;
+        }
+        .start-page__begin__text {
+            text-transform: uppercase;
+            font-size: 2rem;
+            color: #fff;
+        }
+        .start-page__begin__wrapper,
+        .start-page__begin__text {
+            transition: 0.2s linear all;
+        }
+        &:hover .start-page__begin__wrapper {
+            background-color: #fff;
+        }
+        &:hover .start-page__begin__text {
+            color: #000;
+        }
+    }
+}
+
+.fade-in {
+    animation: fadeIn;
+    -webkit-animation: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fade-in--delayed {
+    animation: fadeIn;
+    -webkit-animation: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// Page transition
+// transitions
+.fade-enter .start-page,
+.fade-leave-to .start-page {
+    opacity: 0;
+    transform: rotate(35deg);
+}
+
+.fade-enter-active .start-page,
+.fade-leave-active .start-page {
+    transition: all 10s ease;
 }

@@ -1,20 +1,17 @@
 <template>
-  <div>
-     <router-link class="in-page-link in-page-link--welcome" to="/step-1">
-         <div class="in-page-link__wrapper">
-             <div class="in-page-link__icon"></div>
-             <div class="in-page-link__text">Watch "Welcome"</div>
+  <div class="start-page">
+    <div class="foss-logo"><img src="../../assets/images/foss-logo.svg" alt="FOSS"></div>
+    <div class="start-page__intro-block fade-in">
+      
+      <h1>Beer Process</h1>
+      <p>Welcome to the beer process microsite</p>
+       <router-link class="start-page__begin fade-in--delayed"  to="/step-1">
+         <div class="start-page__begin__wrapper">
+             <div class="start-page__begin__text">BEGIN</div>
+            <div class="start-page__begin__icon"></div>
          </div>
      </router-link>
-      <router-link class="in-page-link in-page-link--grinding" to="/step-1">
-         <div class="in-page-link__wrapper">
-             <div class="in-page-link__icon"></div>
-             <div class="in-page-link__text">Watch "Grinding"</div>
-         </div>
-     </router-link>
-    <video id="step-start" class="step-video" width="1280" height="720" autoplay muted preload loop disablePictureInPicture >
-      <source src="../../assets/videos/sample.mp4" type="video/mp4" />
-    </video>
+    </div>
   </div>
 </template>
 

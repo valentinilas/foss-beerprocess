@@ -1,7 +1,7 @@
 <template>
   <div>
-    <video id="step-2" class="step-video" width="1280" height="720" autoplay preload disablePictureInPicture >
-      <source src="../../assets/videos/sample3.mp4" type="video/mp4" />
+    <video id="step-2" class="step-video" width="1280" height="720" autoplay preload disablePictureInPicture>
+      <source src="../../assets/videos/sample2.mp4" type="video/mp4" />
     </video>
   </div>
 </template>
