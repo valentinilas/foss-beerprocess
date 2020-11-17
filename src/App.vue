@@ -5,6 +5,22 @@
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
+    <!-- Preload -->
+     <video class="d-none" width="1280" height="720"  preload >
+      <source src="./assets/videos/sample2.mp4" type="video/mp4" />
+    </video>
+     <video class="d-none" width="1280" height="720"  preload >
+      <source src="./assets/videos/sample3.mp4" type="video/mp4" />
+    </video>
+     <video class="d-none" width="1280" height="720"  preload >
+      <source src="./assets/videos/sample4.mp4" type="video/mp4" />
+    </video>
+     <video class="d-none" width="1280" height="720"  preload >
+      <source src="./assets/videos/sample5.mp4" type="video/mp4" />
+    </video>
+     <video class="d-none" width="1280" height="720"  preload >
+      <source src="./assets/videos/sample6.mp4" type="video/mp4" />
+    </video>
   </div>
 </template>
 
