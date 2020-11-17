@@ -10,6 +10,7 @@
     z-index: 10;
     transform: translateX(-50%);
     padding: 0rem 2rem;
+    backface-visibility: hidden;
 }
 
 .main-nav__step-wrapper {
@@ -106,6 +107,14 @@
 
 .main-nav__step--7 .main-nav__step-image {
     background-image: url('../../assets/icons/step-6.svg')
+}
+
+.main-nav__step--fs .main-nav__step-image {
+    background-image: url('../../assets/icons/full-screen.svg')
+}
+
+.full-screen-btn {
+    margin-left: auto;
 }
 
 // In-page links
