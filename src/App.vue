@@ -37,6 +37,12 @@ export default {
   components: {
     "app-navigation": Navigation,
   },
+  // data(){
+  //   return{
+  //     windowWidth: window.innerWidth,
+  //     windowHeight: window.innerHeight
+  //   }
+  // },
 
   methods: {
     fsMode(fs){
@@ -58,8 +64,21 @@ export default {
       let elWidth = rootEl.clientWidth;
       let elHeight = rootEl.clientHeight;
       scale = Math.min(windowWidth  / elWidth, windowHeight / elHeight);
+
+
+ 
+
+      if(windowWidth < 1920){
+        rootEl.style.transformOrigin = 'left top'
+      }
+      else{
+        rootEl.style.transformOrigin = 'center top'
+      }
       
       rootEl.style.transform = "scale(" + scale + ")";
+      // this.windowWidth = window.innerWidth;
+      // this.windowHeight = window.innerHeight;
+
       // if(rootEl.classList.contains('scale-up')){
       //    rootEl.style.transform = "scale(" + scale + ")";
       // }
