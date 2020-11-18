@@ -10,7 +10,7 @@
     z-index: 10;
     transform: translateX(-50%);
     padding: 0rem 2rem;
-    backface-visibility: hidden;
+    // backface-visibility: hidden;
 }
 
 .main-nav__step-wrapper {
@@ -35,7 +35,7 @@
         top: 50%;
         transform: translate(75%, -50%);
     }
-    &:last-child {
+    &:nth-last-child(-n+2) {
         &::after {
             content: none;
         }

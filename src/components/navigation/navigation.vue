@@ -58,7 +58,7 @@
      <div class="main-nav__step-wrapper full-screen-btn" @click="toggleFSMode()">
          <div class="main-nav__step main-nav__step--fs">
              <div class="main-nav__step-image"></div>
-             <div class="main-nav__step-text">Full screen</div>
+             <div class="main-nav__step-text" v-text="FsText"></div>
          </div>
      </div>
      <!--  -->

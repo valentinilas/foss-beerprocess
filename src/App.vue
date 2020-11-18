@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <app-navigation @fs="fsMode" />
-
     <transition name="fade" mode="out-in">
-      <router-view />
+      <router-view class="main-view" />
     </transition>
     <!-- Preload -->
     <div class="video-preload-container">
@@ -33,26 +32,18 @@ import Navigation from "./components/navigation/navigation.vue";
 export default {
   name: "App",
 
-
   components: {
     "app-navigation": Navigation,
   },
-  // data(){
-  //   return{
-  //     windowWidth: window.innerWidth,
-  //     windowHeight: window.innerHeight
-  //   }
-  // },
 
   methods: {
-    fsMode(fs){
-      const app = document.getElementById('app');
-      if(fs === 'scale-up'){
-        app.classList.add('scale-up');
+    fsMode(fs) {
+      const app = document.getElementById("app");
+      if (fs === "scale-up") {
+        app.classList.add("scale-up");
         this.onResize();
-      }
-      else{
-        app.classList.remove('scale-up');
+      } else {
+        app.classList.remove("scale-up");
         this.onResize();
       }
     },
@@ -63,38 +54,16 @@ export default {
       let windowHeight = window.innerHeight;
       let elWidth = rootEl.clientWidth;
       let elHeight = rootEl.clientHeight;
-      scale = Math.min(windowWidth  / elWidth, windowHeight / elHeight);
+      scale = Math.min(windowWidth / elWidth, windowHeight / elHeight);
 
-
- 
-
-      if(windowWidth < 1920){
-        rootEl.style.transformOrigin = 'left top'
+      if (windowWidth < 1920) {
+        rootEl.style.transformOrigin = "left top";
+      } else {
+        rootEl.style.transformOrigin = "center top";
       }
-      else{
-        rootEl.style.transformOrigin = 'center top'
-      }
-      
+
       rootEl.style.transform = "scale(" + scale + ")";
-      // this.windowWidth = window.innerWidth;
-      // this.windowHeight = window.innerHeight;
-
-      // if(rootEl.classList.contains('scale-up')){
-      //    rootEl.style.transform = "scale(" + scale + ")";
-      // }
-
-      // else if(windowWidth < 1920) {
-      //   rootEl.style.transform = "scale(" + scale + ")";
-      // }
-      //  else {
-      //   rootEl.style.transform = "scale(" + scale + ")";
-      // }
-      // else{
-      //   rootEl.style.transform = "scale(" + 1 + ")";
-      // }
-      // rootEl.style.transform = "scale(" + scale + ")";
-
-     
+ 
     },
   },
 
