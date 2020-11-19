@@ -182,10 +182,18 @@
 .fade-enter .in-page-link,
 .fade-leave-to .in-page-link {
     opacity: 0;
-    transition-delay: 0s;
     transform: scale(0);
 }
 
+// .in-page-link {
+//     transition: all .6s ease;
+//     transform: scale(0);
+//     opacity: 0;
+// }
+// .in-page-link.active {
+//     transform: scale(1);
+//     opacity: 1;
+// }
 // Animation
 .blob {
     background: black;

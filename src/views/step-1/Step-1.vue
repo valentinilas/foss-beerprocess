@@ -12,8 +12,8 @@
              <div class="in-page-link__text">Watch "Grinding"</div>
          </div>
      </router-link>
-    <video id="step-start" class="step-video" width="1280" height="720" autoplay preload disablePictureInPicture >
-      <source src="../../assets/videos/sample.mp4" type="video/mp4" />
+    <video id="step-start" class="step-video" width="1280" height="720" autoplay preload loop disablePictureInPicture >
+      <source src="../../assets/videos/waiting-01.mp4" type="video/mp4" />
     </video>
   </div>
 </template>

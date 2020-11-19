@@ -7,20 +7,27 @@
     <!-- Preload -->
     <div class="video-preload-container">
       <video width="1280" height="720" preload="auto">
-        <source src="./assets/videos/sample2.mp4" type="video/mp4" />
+        <source src="./assets/videos/waiting-01.mp4" type="video/mp4" />
       </video>
-      <video width="1280" height="720" preload="auto">
-        <source src="./assets/videos/sample3.mp4" type="video/mp4" />
+         <video width="1280" height="720" preload="auto">
+        <source src="./assets/videos/waiting-02.mp4" type="video/mp4" />
       </video>
-      <video width="1280" height="720" preload="auto">
-        <source src="./assets/videos/sample4.mp4" type="video/mp4" />
+         <video width="1280" height="720" preload="auto">
+        <source src="./assets/videos/waiting-03.mp4" type="video/mp4" />
       </video>
-      <video width="1280" height="720" preload="auto">
-        <source src="./assets/videos/sample5.mp4" type="video/mp4" />
+         <video width="1280" height="720" preload="auto">
+        <source src="./assets/videos/waiting-04.mp4" type="video/mp4" />
       </video>
-      <video width="1280" height="720" preload="auto">
-        <source src="./assets/videos/sample6.mp4" type="video/mp4" />
+         <video width="1280" height="720" preload="auto">
+        <source src="./assets/videos/waiting-05.mp4" type="video/mp4" />
       </video>
+         <video width="1280" height="720" preload="auto">
+        <source src="./assets/videos/waiting-06.mp4" type="video/mp4" />
+      </video>
+            <video width="1280" height="720" preload="auto">
+        <source src="./assets/videos/waiting-07.mp4" type="video/mp4" />
+      </video>
+     
     </div>
   </div>
 </template>
