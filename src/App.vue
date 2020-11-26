@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <app-navigation @fs="fsMode" />
-    <transition name="fade" mode="out-in">
+    <transition :name="transition" mode="out-in">
       <router-view class="main-view" />
     </transition>
     <!-- Preload -->
@@ -9,39 +9,56 @@
       <video width="1280" height="720" preload="auto">
         <source src="./assets/videos/waiting-01.mp4" type="video/mp4" />
       </video>
-         <video width="1280" height="720" preload="auto">
+      <video width="1280" height="720" preload="auto">
         <source src="./assets/videos/waiting-02.mp4" type="video/mp4" />
       </video>
-         <video width="1280" height="720" preload="auto">
+      <video width="1280" height="720" preload="auto">
         <source src="./assets/videos/waiting-03.mp4" type="video/mp4" />
       </video>
-         <video width="1280" height="720" preload="auto">
+      <video width="1280" height="720" preload="auto">
         <source src="./assets/videos/waiting-04.mp4" type="video/mp4" />
       </video>
-         <video width="1280" height="720" preload="auto">
+      <video width="1280" height="720" preload="auto">
         <source src="./assets/videos/waiting-05.mp4" type="video/mp4" />
       </video>
-         <video width="1280" height="720" preload="auto">
+      <video width="1280" height="720" preload="auto">
         <source src="./assets/videos/waiting-06.mp4" type="video/mp4" />
       </video>
-            <video width="1280" height="720" preload="auto">
+      <video width="1280" height="720" preload="auto">
         <source src="./assets/videos/waiting-07.mp4" type="video/mp4" />
       </video>
-     
     </div>
   </div>
 </template>
-
 
 <script>
 import Navigation from "./components/navigation/navigation.vue";
 
 export default {
   name: "App",
+  data(){
+    return {
+      transition: null
+    }
+  },
 
   components: {
     "app-navigation": Navigation,
   },
+  watch: {
+  '$route' (to, from) {
+    // const toDepth = to.path.split('/').length
+    // const fromDepth = from.path.split('/').length
+    // this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    console.log(to);
+    this.transition = to.path.indexOf('talk') > -1 || from.path.indexOf('talk')  > -1 ? 'fade' : 'zoom';
+    
+   if(to.query.source === 'main'){
+     this.transition = 'zoom';
+   } 
+ 
+  }
+},
 
   methods: {
     fsMode(fs) {
@@ -70,7 +87,6 @@ export default {
       }
 
       rootEl.style.transform = "scale(" + scale + ")";
- 
     },
   },
 
@@ -90,4 +106,4 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./app.scss" ></style>
+<style lang="scss" src="./app.scss"></style>

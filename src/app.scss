@@ -44,10 +44,20 @@ body {
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
-    transform: scale(1.5);
 }
 
 .fade-enter-active,
 .fade-leave-active {
+    transition: all .6s ease;
+}
+
+.zoom-enter,
+.zoom-leave-to {
+    opacity: 0;
+    transform: scale(1.5);
+}
+
+.zoom-enter-active,
+.zoom-leave-active {
     transition: all .6s ease;
 }

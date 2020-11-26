@@ -10,6 +10,15 @@ import Step4 from '../views/step-4/Step-4.vue'
 import Step5 from '../views/step-5/Step-5.vue'
 import Step6 from '../views/step-6/Step-6.vue'
 import Step7 from '../views/step-7/Step-7.vue'
+import Step1Talk from '../views/step-1-talk/Step-1-talk.vue'
+import Step2Talk from '../views/step-2-talk/Step-2-talk.vue'
+import Step3Talk from '../views/step-3-talk/Step-3-talk.vue'
+import Step4Talk from '../views/step-4-talk/Step-4-talk.vue'
+import Step5Talk from '../views/step-5-talk/Step-5-talk.vue'
+import Step6Talk from '../views/step-6-talk/Step-6-talk.vue'
+import Step7Talk from '../views/step-7-talk/Step-7-talk.vue'
+import Step8 from '../views/step-8-testimonial/Step-8-testimonial.vue' // testimonial
+import Step9 from '../views/step-9-water/Step-9-water.vue' // watering hole
 
 Vue.use(VueRouter)
 
@@ -52,7 +61,53 @@ const routes = [{
         path: '/step-7',
         name: 'Step7',
         component: Step7
+    },
+    {
+        path: '/step-1-talk',
+        name: 'Step1Talk',
+        component: Step1Talk
+    },
+    {
+        path: '/step-2-talk',
+        name: 'Step2Talk',
+        component: Step2Talk
+    },
+    {
+        path: '/step-3-talk',
+        name: 'Step3Talk',
+        component: Step3Talk
+    },
+    {
+        path: '/step-4-talk',
+        name: 'Step4Talk',
+        component: Step4Talk
+    },
+    {
+        path: '/step-5-talk',
+        name: 'Step5Talk',
+        component: Step5Talk
+    },
+    {
+        path: '/step-6-talk',
+        name: 'Step6Talk',
+        component: Step6Talk
+    },
+    {
+        path: '/step-7-talk',
+        name: 'Step7Talk',
+        component: Step7Talk
+    },
+    {
+        path: '/step-8',
+        name: 'Step8',
+        component: Step8
+    },
+    {
+        path: '/step-9',
+        name: 'Step9',
+        component: Step9
     }
+
 
 ]
 
