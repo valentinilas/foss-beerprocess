@@ -6,7 +6,13 @@
              <div class="in-page-link__text">Mashing</div>
          </div>
      </router-link>
-      <router-link class="in-page-link in-page-link--grinding" to="/step-4">
+     <router-link class="in-page-link in-page-link--how-to" to="/step-3-talk-howto">
+         <div class="in-page-link__wrapper">
+             <div class="in-page-link__icon"></div>
+             <div class="in-page-link__text">Measure a sample</div>
+         </div>
+     </router-link>
+      <router-link class="in-page-link in-page-link--lautering" to="/step-4">
          <div class="in-page-link__wrapper">
              <div class="in-page-link__icon"></div>
              <div class="in-page-link__text">Lautering</div>

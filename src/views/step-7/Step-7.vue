@@ -1,18 +1,42 @@
 <template>
   <div>
-     <router-link class="in-page-link in-page-link--welcome" to="/step-7-talk">
-         <div class="in-page-link__wrapper">
-             <div class="in-page-link__icon"></div>
-             <div class="in-page-link__text">Finished beer</div>
-         </div>
-     </router-link>
+    <router-link v-if="!ended" class="in-page-link in-page-link--welcome" to="/step-7-talk">
+      <div class="in-page-link__wrapper">
+        <div class="in-page-link__icon"></div>
+        <div class="in-page-link__text">Finished beer</div>
+      </div>
+    </router-link>
+    <transition name="zoom">
+      <router-link v-if="ended" class="in-page-link in-page-link--welcome" to="/step-1">
+        <div class="in-page-link__wrapper">
+          <div class="in-page-link__icon"></div>
+          <div class="in-page-link__text">Start over</div>
+        </div>
+      </router-link>
+    </transition>
 
-    <video id="step-7" class="step-video" width="1280" height="720" autoplay preload loop disablePictureInPicture >
+    <transition name="zoom">
+      <router-link v-if="ended" class="in-page-link in-page-link--testimonial" to="/step-8">
+        <div class="in-page-link__wrapper">
+          <div class="in-page-link__icon"></div>
+          <div class="in-page-link__text">See testimonial</div>
+        </div>
+      </router-link>
+    </transition>
+    <transition name="zoom">
+      <router-link v-if="ended" class="in-page-link in-page-link--water" to="/step-9">
+        <div class="in-page-link__wrapper">
+          <div class="in-page-link__icon"></div>
+          <div class="in-page-link__text">Watering hole</div>
+        </div>
+      </router-link>
+    </transition>
+
+    <video id="step-7" class="step-video" width="1280" height="720" autoplay preload loop disablePictureInPicture>
       <source src="../../assets/videos/waiting-07.mp4" type="video/mp4" />
     </video>
   </div>
 </template>
 
-
 <script lang="js" src="./Step-7.js"></script>
-<style lang="scss" src="./Step-7.scss" ></style>
+<style lang="scss" src="./Step-7.scss"></style>

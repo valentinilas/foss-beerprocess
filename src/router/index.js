@@ -19,6 +19,7 @@ import Step6Talk from '../views/step-6-talk/Step-6-talk.vue'
 import Step7Talk from '../views/step-7-talk/Step-7-talk.vue'
 import Step8 from '../views/step-8-testimonial/Step-8-testimonial.vue' // testimonial
 import Step9 from '../views/step-9-water/Step-9-water.vue' // watering hole
+import Step3TalkHowTo from '../views/step-3-talk-howto/Step-3-talk-howto.vue' // watering hole
 
 Vue.use(VueRouter)
 
@@ -106,6 +107,11 @@ const routes = [{
         path: '/step-9',
         name: 'Step9',
         component: Step9
+    },
+    {
+        path: '/step-3-talk-howto',
+        name: 'Step3TalkHowTo',
+        component: Step3TalkHowTo
     }
 
 

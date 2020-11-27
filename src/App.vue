@@ -50,7 +50,6 @@ export default {
     // const toDepth = to.path.split('/').length
     // const fromDepth = from.path.split('/').length
     // this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-    console.log(to);
     this.transition = to.path.indexOf('talk') > -1 || from.path.indexOf('talk')  > -1 ? 'fade' : 'zoom';
     
    if(to.query.source === 'main'){
