@@ -5,7 +5,7 @@ export default {
     mounted() {
         const video = document.getElementById('step-8');
         video.addEventListener('ended', function() {
-            router.push('/step-7-talk')
+            router.push('/step-7?ended=true')
         });
 
     }

@@ -19,7 +19,7 @@
       <router-link v-if="ended" class="in-page-link in-page-link--testimonial" to="/step-8">
         <div class="in-page-link__wrapper">
           <div class="in-page-link__icon"></div>
-          <div class="in-page-link__text">See testimonial</div>
+          <div class="in-page-link__text">See customer case</div>
         </div>
       </router-link>
     </transition>
@@ -27,7 +27,7 @@
       <router-link v-if="ended" class="in-page-link in-page-link--water" to="/step-9">
         <div class="in-page-link__wrapper">
           <div class="in-page-link__icon"></div>
-          <div class="in-page-link__text">Watering hole</div>
+          <div class="in-page-link__text">The Watering hole</div>
         </div>
       </router-link>
     </transition>
