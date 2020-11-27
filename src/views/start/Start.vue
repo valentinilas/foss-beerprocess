@@ -3,12 +3,10 @@
     <div class="foss-logo"><img src="../../assets/images/foss-logo.svg" alt="FOSS"></div>
     <div class="start-page__intro-block fade-in">
       
-      <h1>Beer Process</h1>
-      <p>Welcome to the beer process microsite</p>
-       <router-link class="start-page__begin fade-in--delayed"  to="/step-1">
+      <h1><span>Introducing</span><span>BeerFoss&trade; FT <em>Go</em></span></h1>
+       <router-link class="start-page__begin "  to="/step-1">
          <div class="start-page__begin__wrapper">
-             <div class="start-page__begin__text">BEGIN</div>
-            <div class="start-page__begin__icon"></div>
+             <div class="start-page__begin__text">ENTER</div>
          </div>
      </router-link>
     </div>

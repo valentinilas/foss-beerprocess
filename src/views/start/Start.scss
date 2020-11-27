@@ -23,45 +23,72 @@
 }
 
 .start-page__intro-block {
+    text-align: center;
     opacity: 0;
-    color: #fff;
     h1 {
         font-size: 4rem;
-        text-transform: uppercase;
         font-weight: bold;
         margin-bottom: 1rem;
     }
-    p {
-        font-size: 2rem;
+    h1 {
+        color: #054086;
     }
-    .start-page__begin {
-        outline: none !important;
-        text-decoration: none !important;
-        margin-top: 2.5rem;
-        display: inline-block;
-        opacity: 0;
-        .start-page__begin__wrapper {
-            padding: 1rem 3rem;
-            background-color: rgb(245, 140, 40);
-            flex-grow: 0;
-            border-radius: 0 10px 10px 10px;
-        }
-        .start-page__begin__text {
-            text-transform: uppercase;
-            font-size: 2rem;
-            color: #fff;
-        }
-        .start-page__begin__wrapper,
-        .start-page__begin__text {
-            transition: 0.2s linear all;
-        }
-        &:hover .start-page__begin__wrapper {
-            background-color: #fff;
-        }
-        &:hover .start-page__begin__text {
-            color: #000;
-        }
+    span {
+        display: block;
     }
+    h1 span:first-child {
+        text-transform: uppercase;
+        font-weight: normal;
+        margin-bottom: 1.75rem;
+    }
+    h1 span:last-child {
+        font-size: 7rem;
+    }
+    h1 em {
+        color: #f48d27
+    }
+}
+
+.start-page__begin {
+    text-decoration: none !important;
+    outline: none !important;
+    margin: 0 auto;
+    display: block;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 0 0 rgba(245, 140, 40, 1);
+    animation: pulseOrange 2s infinite;
+    animation-delay: 0.3s;
+    border-radius: 50%;
+}
+
+.start-page__begin__wrapper {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    background-color: #f48d27;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    padding: 1rem;
+    box-shadow: 0 0 0 0 rgba(245, 140, 40, 1);
+    animation: pulseOrange 2s infinite;
+    transition: all 0.6s ease;
+}
+
+.start-page__begin:hover .start-page__begin__wrapper {
+    background-color: #fff;
+}
+
+.start-page__begin:hover .start-page__begin__text {
+    color: #000;
+}
+
+.start-page__begin__text {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 .fade-in {

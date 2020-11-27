@@ -6,7 +6,7 @@
              <div class="in-page-link__text">Boiling</div>
          </div>
      </router-link>
-      <router-link class="in-page-link in-page-link--grinding" to="/step-6">
+      <router-link class="in-page-link in-page-link--fermentation" to="/step-6">
          <div class="in-page-link__wrapper">
              <div class="in-page-link__icon"></div>
              <div class="in-page-link__text">Fermentation</div>
